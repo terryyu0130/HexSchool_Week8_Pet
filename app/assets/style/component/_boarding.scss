@@ -1,0 +1,55 @@
+// boarding
+.boarding {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 63px 0 57px;
+    @include mobile {
+        padding: 0;
+    }
+    .text {
+        width: 34%;
+        @include pad {
+            width: 43%;
+        }
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .title {
+        color: $color-primary;
+        font: normal normal bold 40px/60px Noto Sans CJK TC;
+        margin-bottom: $small;
+        @include mobile {
+            font: normal normal bold 28px/42px Noto Sans CJK TC;
+            margin-top: $small-lg;
+            margin-bottom: $small-sm;
+        }
+    }
+    .subtitle {
+        color: $color-primary;
+        font: normal normal bold 24px/36px Noto Sans CJK TC;
+        @include mobile {
+            font: normal normal medium 20px/30px Noto Sans CJK TC;
+        }
+    }
+    .pic {
+        width: 65.766%;
+        padding-top: 28.379%;
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/homestay-1.png');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include pad {
+            width: 56.424%;
+            padding-top: 45.573%;
+        }
+        @include mobile {
+            width: 100%;
+            order: -1;
+            padding-top: 93.87%;
+        }
+    }
+}

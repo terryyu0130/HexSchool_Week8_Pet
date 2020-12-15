@@ -1,0 +1,123 @@
+// reservation
+.reservation {
+    margin-bottom: $X-large;
+    @include mobile {
+        margin-bottom: 60px;
+    }
+    .photo-link {
+        display: flex;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    .photo {
+        height: 350px;
+        // padding-top: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: $small-sm;
+        @include pad {
+            height: 210px;
+        }
+        @include mobile {
+            height: 132px;
+        }
+    }
+    .photo-one {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-5.jpeg");
+    }
+    .photo-two {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-6.jpeg");
+        background-position: 70% center;
+    }
+    .photo-three {
+        height: 172px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-7.jpeg");
+        @include pad {
+            height: 103px;
+        }
+        @include mobile {
+            height: 132px;
+        }
+    }
+    .photo-four {
+        height: 172px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-8.jpeg");
+        @include pad {
+            height: 103px;
+        }
+        @include mobile {
+            height: 132px;
+        }
+    }
+    .photo-five {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/index-3.jpeg");
+    }
+    .link-one {
+        width: 32%;
+    }
+    .link-two {
+        width: 28%;
+    }
+    .link-three {
+        width: 24%;
+        @include mobile {
+            width: 100%;
+            margin-top: $small-sm;
+        }
+        .link {
+            margin-left: 6px;
+            @include pad {
+                margin-left: $small-sm;
+            }
+            @include mobile {
+                margin-left: 0;
+            }
+            & + .link {
+                margin-top: 6px;
+                @include pad {
+                    margin-top: $small-sm;
+                }
+            }
+        }
+    }
+    .link-four {
+        width: 16%;
+    }
+    .link {
+        position: relative;
+        @include mobile {
+            width: 100%;
+        }
+        &:hover {
+            .text {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .link ~ .link {
+        margin-left: 6px;
+        @include pad {
+            margin-left: $small-sm;
+        }
+        @include mobile {
+            margin-left: 0;
+            margin-top: $small-sm;
+        }
+    }
+    .text {
+        font: normal normal bold 24px/36px Noto Sans CJK TC;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $small-sm;
+        color: $color-white;
+        transition: 0.5s;
+    }
+}

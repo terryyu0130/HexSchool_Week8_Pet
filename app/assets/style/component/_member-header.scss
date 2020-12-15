@@ -1,0 +1,79 @@
+//member-header
+
+.member-header {
+    position: relative;
+    .menu {
+        .member-name {
+            display: flex;
+            align-items: center;
+            @include mobile {
+                justify-content: center;
+            }
+        }
+        .member-menu {
+            width: 20%;
+            position: absolute;
+            right: 0;
+            border: 1px solid $color-muted;
+            border-radius: 0 0 $small-sm $small-sm;
+            padding-top: $small-md;
+            display: none;
+            @include pad {
+                width: 30%;
+                right: -5.5%;
+            }
+            @include mobile {
+                width: 100%;
+                right: 0;
+                padding-top: 0;
+                border-bottom: none;
+            }
+            li {
+                transition: .5s;
+                padding: $small-sm 0;
+                background-color: $color-white;
+                &:hover {
+                    background-color: #F8F9FA;
+                }
+                &+li {
+                    margin-left: 0;
+                    margin-top: $small-sm;
+                    @include mobile {
+                        margin-top: 0;
+                    }
+                }
+            }
+            .data,
+            .reserve-search,
+            .history {
+                display: block;
+                color: $color-primary;
+                font: normal normal normal 16px/24px Noto Sans CJK TC;
+                padding: $small-sm $middle-sm;
+            }
+            .divided {
+                border-top: 1px solid $color-muted;
+                margin-top: 0;
+                @include mobile {
+                    border-top: none;
+                }
+            }
+            .switch-account {
+                display: block;
+                color: $color-secondary;
+                font: normal normal normal 16px/24px Noto Sans CJK TC;
+                padding: $small-md $middle-sm;
+                @include mobile {
+                    padding: $small-lg $middle-sm;
+                }
+            }
+        }
+    }
+}
+.member-btn {
+    position: relative;
+    z-index: 5;
+    &.active {
+        transform: scale(-1);
+    }
+}

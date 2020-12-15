@@ -1,0 +1,139 @@
+// footer
+
+.helper {
+    position: relative;
+    z-index: 2;
+    background-color: $color-warning;
+    .title {
+        color: $color-primary;
+        font: normal normal bold 40px/60px Noto Sans CJK TC;
+        padding: $middle 0 $small-md;
+        @include mobile {
+            font: normal normal bold 24px/36px Noto Sans CJK TC;
+            padding: $middle 0 $small-lg;
+        }
+    }
+    .subtitle {
+        line-height: 1.5em;
+        color: $color-primary;
+        font: normal normal bold 20px/30px Noto Sans CJK TC;
+        padding-bottom: $small;
+        @include mobile {
+            font: normal normal medium 16px/24px Noto Sans CJK TC;
+        }
+    }
+    .submit-group {
+        display: flex;
+        padding-bottom: $middle;
+        input {
+            border: none;
+            outline: none;
+            padding: $small-lg 0;
+        }
+        .email {
+            width: 35%;
+            padding-left: $small-lg;
+            border-radius: $small-sm 0 0 $small-sm;
+            border: 1px solid $color-muted;
+            border-right: none;
+            &::placeholder {
+                color: $color-muted;
+                font: normal normal normal 16px/18px Helvetica Neue;
+            }
+            @include pad {
+                width: 50%;
+            }
+        }
+        .submit {
+            width: 15%;
+            color: $color-white;
+            background-color: $color-secondary;
+            border-radius: 0 $small-sm $small-sm 0;
+            border: 1px solid $color-muted;
+            border-left: none;
+            transition: 0.5s;
+            &:hover {
+                background-color: $color-primary;
+            }
+            @include pad {
+                width: 20%;
+            }
+            @include mobile {
+                width: 50%;
+            }
+        }
+    }
+}
+.footer {
+    position: relative;
+    z-index: 2;
+    background-color: $color-white;
+    @include mobile {
+        display: none;
+    }
+    .list {
+        padding: 60px 0 108px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .project {
+        flex-grow: 1;
+        @include pad {
+            flex-grow: 0;
+        }
+    }
+    .logo {
+        margin-bottom: $middle-md;
+    }
+    .title {
+        color: $color-primary;
+        font: normal normal bold 20px/30px Noto Sans CJK TC;
+        padding: $small-lg 0 $middle;
+    }
+    .menu {
+        li ~ li {
+            margin-top: $middle-md;
+        }
+        a {
+            display: block;
+            color: $color-primary;
+            font: normal normal normal 16px/24px Noto Sans CJK TC;
+            transition: 0.5s;
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+.copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $middle-lg;
+    @include mobile {
+        margin-bottom: $middle-md;
+    }
+    .phone-group {
+        display: flex;
+        align-items: center;
+        @include mobile {
+            display: none;
+        }
+    }
+    .material-icons {
+        color: $color-primary;
+    }
+    .phone {
+        border: none;
+        outline: none;
+        color: $color-primary;
+        font: normal normal bold 20px/30px Noto Sans CJK TC;
+        margin-left: $small-lg;
+    }
+    .text {
+        color: $color-primary;
+        font: normal normal medium 14px/21px SF Pro Text;
+    }
+}

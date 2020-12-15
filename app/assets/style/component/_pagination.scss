@@ -1,0 +1,36 @@
+// pagination
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: $X-large;
+    @include pad {
+        margin-bottom: 60px;
+    }
+    li {
+        margin: 0 -1px 0 0;
+        transition: .5s;
+        &:hover {
+            background-color: $color-warning;
+        }
+    }
+    a {
+        display: block;
+        padding: $small-md $small;
+        color: $color-primary;
+        font: normal normal normal 16px/24px Helvetica Neue;
+        border: 1px solid $color-muted;
+    }
+    .material-icons {
+        color: $color-primary;
+        padding: $small-md;
+        border: 1px solid $color-muted;
+        cursor: pointer;
+    }
+    .left {
+        border-radius: 4px 0 0 4px;
+    }
+    .right {
+        border-radius: 0 4px 4px 0;
+    }
+}

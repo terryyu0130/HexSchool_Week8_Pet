@@ -1,0 +1,56 @@
+---
+title: login
+layout: ./app/layout.ejs
+engine: ejs
+current: login
+---
+
+<!-- header -->
+<div class="container">
+    <div class="header member-header">
+        <h1 class="logo"><a href="index.html">Logo</a></h1>
+        <ul class="menu">
+            <li><a href="#" class="default">預約服務</a></li>
+            <li><a href="#" class="default">成為寵物保姆</a></li>
+            <li><a href="login.html" class="default">登入</a></li>
+        </ul>
+        <span class="material-icons btn">
+            dehaze
+        </span>
+    </div>
+</div>
+
+<!-- login-banner -->
+<div class="login-banner">
+    <div class="pic"></div>
+    <div class="content">
+        <h2 class="title">登入</h2>
+        <label for="email">
+            電子信箱
+            <input type="email" id="email" class="email" placeholder="example@gmail.com">
+        </label>
+        <label for="password" class="mt-16">
+            <span class="sm-db">請輸入密碼</span>
+            <input type="password" id="password" class="password" placeholder="請輸入密碼">
+        </label>
+        <a href="#" class="forget-password">忘記密碼</a>
+        <div class="checkbox-group">
+            <input type="checkbox" class="checkbox">
+            <span class="save-account">記住我的帳號</span>
+        </div>
+        <div class="btn-group">
+            <a href="#" class="facebook">
+                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/facebook.svg"
+                    alt="">
+                Facebook
+            </a>
+            <a href="#" class="google">
+                <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/petpet-week8/google.svg"
+                    alt="">
+                Google
+            </a>
+        </div>
+        <a href="member-page.html" class="login">登入</a>
+        <a href="#" class="not-register">還沒註冊嗎？</a>
+    </div>
+</div>
